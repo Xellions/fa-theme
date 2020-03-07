@@ -1,0 +1,43 @@
+{
+  "name": "theme-foroanime",
+  "version": "1.0.0",
+  "description": "correspondiente a la maqueta plana para el sitio de foroanime.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Xellions/fa-theme.git"
+  },
+  "keywords": [
+    "#foro",
+    "#html",
+    "#postcss",
+    "#gulp"
+  ],
+  "author": "@Xellions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xellions/fa-theme/issues"
+  },
+  "homepage": "https://github.com/Xellions/fa-theme#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
+    "postcss-math": "0.0.10",
+    "postcss-mixins": "^6.2.3",
+    "postcss-nested": "^4.2.1"
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 10%",
+    "ie >= 10",
+    "maintained node versions"
+  ]
+}
