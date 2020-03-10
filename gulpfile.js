@@ -43,6 +43,6 @@ gulp.task(
 						}));
 gulp.task('watch', function() {
 	console.log('-------------------------0-------------------------');
-  	gulp.watch(input+'*.css', gulp.task('compile'));
+  	gulp.watch(input+'**/*.scss', gulp.task('compile'));
   	console.log('-------------------------0-------------------------');
 });
