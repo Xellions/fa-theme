@@ -1,0 +1,64 @@
+/*configuracion elemental de fuentes en el sitio*/
+body{
+	font-size: $letter_size;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+	color:$color-text;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	margin-top: 0;
+	margin-bottom: $max_space;
+}
+h4,h5,h6{
+	font-weight: 400;
+	margin-bottom: $mid_space;
+}
+%extend_italic{
+	font-style: italic;
+	padding: 0 $min_space;
+}
+a{
+	color:#498CB3;
+}
+q{
+	text-shadow:0 1px color($color-text l(70%));
+	@extend %extend_italic;
+}
+blockquote{
+	@extend %extend_italic;
+	border:1px solid color($color-text l(70%));
+	margin:$min_space;
+	padding: $min_space;
+	position: relative;
+	&:before,&:after{
+		content:'"';
+		background-color: $site-bg;
+		border:1px solid color($color-text l(70%));
+		display: block;
+		position:absolute;
+		text-align: center;
+		font-weight: 800;
+		top:resolve($letter_size/-2);
+		left:resolve($letter_size/-2);
+		width:$letter_size;
+		height: $letter_size;
+		border-radius:$letter_size;
+		padding-top: resolve($letter_size/4);
+		padding-right: resolve($letter_size/4);
+	}
+	&:after{
+		top:initial;
+		left: initial;
+		bottom:resolve($letter_size/-2);
+		right:resolve($letter_size/-2);
+	}
+}
+h{
+	@for $count from 1 to 6 by 1 {
+		&$count{
+			font-size:resolve( 2rem - (($count - 1) * 0.2rem ));
+		}
+	}
+}

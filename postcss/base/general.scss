@@ -1,0 +1,84 @@
+figure{
+    border-bottom:1px solid color($color-text l(70%));
+    border-top:1px solid color($color-text l(70%));
+    margin:$mid_space 0;
+    max-width: 100%;
+    overflow: hidden;
+    img{max-width: 100%}
+    figcaption{
+    	font-size:small;
+    	padding:resolve($min_space/2) $min_space $min_space;
+    }
+}
+.no{
+	&-list{
+		list-style:none;
+		padding-left: 0;
+	}
+	&-margin{margin: 0;}
+}
+.d{
+	&-block{
+		display: block;
+		&-inline{display: inline-block;}
+	}
+	&-flex{
+		display: flex;
+	}
+}
+.container{
+	h1,h2,h3,h4,h5,h6,p{
+		padding:0 $min_space 0 $min_space;
+	}
+}
+.card{
+	border-radius:$min_space;
+	box-shadow:0 0 5px color($color-text a(60%));
+	margin:$min_space;
+	overflow:hidden;
+	figure{
+		margin:0;
+		padding-top: 100%;
+		width: 100%;
+	}
+	img{
+		height: 100%;
+		object-fit: cover;
+		position:absolute;
+		top:0;
+		width:  100%;
+		z-index: 0;
+	}
+	h2,
+	p,
+	figure{
+		position: relative;
+	}
+	h2{
+		background:linear-gradient(to top,$color-text calc(100% - resolve($max_space + 5px)),transparent);
+		color:color($color-text contrast(100%));
+		margin-bottom: 0;	
+		margin-top:resolve(($max_space + 5px) * -1 );
+		padding: $max_space $min_space $mid_space;
+		width: 100%;
+		z-index: 2;
+	}
+	p{
+		background-color: $color-text;
+		color:color($color-text contrast(100%));
+		font-size: 1.08rem;
+		margin: -1px 0;
+		padding-bottom:$mid_space;
+		line-height: 1.4rem;
+	}
+	.data{
+		border-top:1px solid color($color-text contrast(100%));
+		display: flex;
+		justify-content:space-between;
+		align-items:center;
+		padding-bottom: 0;
+		height:$max_space;
+		.author:before{content:"Por: ";}
+		.where:before {content:"En: ";}
+	}
+}

@@ -1,0 +1,10 @@
+.menu-top{
+	background-color: $color-text;
+	height: $max_space;
+	max-width: 100%;
+	overflow: hidden;
+	.menu-container{
+		width: auto;
+		overflow-x: auto;
+	}
+}
