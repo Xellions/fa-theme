@@ -10,23 +10,32 @@ figure{
     	padding:resolve($min_space/2) $min_space $min_space;
     }
 }
+%no-show{display: none;}
 .no{
 	&-list{
 		list-style:none;
 		padding-left: 0;
 	}
 	&-margin{margin: 0;}
+	&-show{
+		&-under,&-over{
+			@each $size in $breackpoints {
+			  &-$size{@extend %no-show;}
+			}
+		}
+	}
 }
 .d{
 	&-block{
 		display: block;
 		&-inline{display: inline-block;}
 	}
-	&-flex{
-		display: flex;
-	}
+	&-flex{display: flex;}
+	&-none{@extend %no-show}
 }
 .container{
+	margin-left: $min_space;
+	margin-right: $min_space;
 	h1,h2,h3,h4,h5,h6,p{
 		padding:0 $min_space 0 $min_space;
 	}

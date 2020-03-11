@@ -5,6 +5,30 @@
 	overflow: hidden;
 	.menu-container{
 		width: auto;
-		overflow-x: auto;
+	    align-items: center;
+	    flex: 1 1 auto;
+	    height: 100%;
+	    overflow-x: auto;
+	    nav{
+	    	&:last-child{
+	    		li:last-child{border-right: none;}
+	    	}
+	    	li{
+				border-right:1px solid color($color-text contrast(50%));
+	    		flex-grow: 1;
+	    		text-align: center;
+
+	    	}
+	    }
+	}
+	a{
+		align-items: center;
+		color:color($color-text contrast(100%));
+		display: block;
+		display: flex;
+		height: 42px;
+		justify-content:center;
+		text-decoration: none;
+		width:42px;
 	}
 }
